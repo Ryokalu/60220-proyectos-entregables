@@ -1,3 +1,4 @@
+const { type } = require("os");
 
 class ProductManager {
     constructor() {
@@ -8,8 +9,7 @@ class ProductManager {
 
         let val1 = false
         let val2 = false
-
-        if (title && description && price && thumbnail && code && stock === undefined) {
+        if (typeof title && typeof description && typeof price && typeof thumbnail && typeof code && typeof stock === 'undefined') {
             val1 = true;
         }
 
@@ -78,6 +78,8 @@ console.log(comprobar)
 // se agregan productos
 prod.addproduct("producto prueba", "Este es un producto prueba", 200, "No imagen", "codigo", 255)
 prod.addproduct("otro producto", "Este es otro producto", 300, "sin imagen", "otro codigo", 2554)
+prod.addproduct("300", "sin imagen", "otro codigo", 2554)
+
 
 // se trae  el unico producto agregado al array
 let comprobar2 = prod.getProduct();
