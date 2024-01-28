@@ -1,4 +1,3 @@
-const { match } = require("assert")
 
 
 
@@ -157,29 +156,30 @@ class ProductManager {
 
 let prod = new ProductManager("productos");
 
-
-
-// se agregan productos
-
-
 let persistirProd = async () => {
-
+    // buscar productos (si es primera vez retorna [])
     let productosVacios = await prod.getProduct();
     console.log(productosVacios)
-    // await prod.addproduct("producto prueba", "producto ejemplo", 200, "No imagen", "codigo", 255)
-    // await prod.addproduct("producto prueba", "producto ejemploproducto ejemplo", 200, "No imagen", "codigo2", 255)
-    // await prod.addproduct("producto prueba", "producto ejemploproducto ejemplo", 200, "No imagen", "codigo3", 255)
-    // await prod.addproduct("producto prueba", "producto ejemploproducto ejemplo", 200, "No imagen", "codigo4", 255)
-    // await prod.addproduct("", "producto ejemploproducto ejemplo", 200, "No imagen", "codigo4", 255)
-    // let productos = await prod.getProduct();
-    // console.log(productos)
-    // let buscarPorID = await prod.getProductById(1123);
-    // console.log(buscarPorID)
+    // agregar productos
+    await prod.addproduct("producto prueba", "producto ejemplo", 200, "No imagen", "codigo", 255)
+    await prod.addproduct("producto prueba", "producto ejemploproducto ejemplo", 200, "No imagen", "codigo2", 255)
+    await prod.addproduct("producto prueba", "producto ejemploproducto ejemplo", 200, "No imagen", "codigo3", 255)
+    await prod.addproduct("producto prueba", "producto ejemploproducto ejemplo", 200, "No imagen", "codigo4", 255)
+    // agregar un producto vacio
+    await prod.addproduct("", "producto ejemploproducto ejemplo", 200, "No imagen", "codigo4", 255)
+    // buscar productos 
+    let productos = await prod.getProduct();
+    console.log(productos)
+    // buscar por ID
+    let buscarPorID = await prod.getProductById(1123);
+    console.log(buscarPorID)
+    // eliminar por id
     let eliminarPorID = await prod.deleteProductByID(5);
     console.log(eliminarPorID)
-    // let datosCambiar = { title: "titulo Cambiado :O", description: "otra descripcion :D" }
-    // let cambioPorID = await prod.updateitemById(1, datosCambiar)
-    // console.log(cambioPorID)
+    // modificar elementos 
+    let datosCambiar = { title: "titulo Cambiado :O", description: "otra descripcion :D" }
+    let cambioPorID = await prod.updateitemById(1, datosCambiar)
+    console.log(cambioPorID)
 
 }
 
