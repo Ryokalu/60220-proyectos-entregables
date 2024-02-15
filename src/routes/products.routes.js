@@ -8,7 +8,7 @@ const prodManager = new ProductManager("json")
 router.get('/', async (req, res) => {
     try {
         const productList = await prodManager.getProduct()
-        if (productList === 1) res.send(400).send("SIN DATA")
+        if (productList === 1) res.status(400).send("SIN DATA")
 
         res.json(productList)
     }

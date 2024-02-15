@@ -19,7 +19,7 @@ class CartManager {
 
 
     constructor(path) {
-        this.path = path
+        this.path = path + "/json"
         this.#fileSys = fs;
         this.#filePath = this.path + "/Carrito.json"
     }
@@ -27,6 +27,7 @@ class CartManager {
 
     async createCart() {
 
+        await this.#fileSys.promises.mkdir(this.path, { recursive: true });
 
         if (!this.#fileSys.existsSync(this.#filePath)) {
             await this.#fileSys.promises.writeFile(this.#filePath, "[]")
@@ -48,6 +49,9 @@ class CartManager {
     }
 
     async getCartsbyID(cid) {
+
+        await this.#fileSys.promises.mkdir(this.path, { recursive: true });
+
         if (this.#fileSys.existsSync(this.#filePath)) {
             let CartFile = await this.#fileSys.promises.readFile(this.#filePath, "utf-8")
             let lista = JSON.parse(CartFile)
@@ -65,6 +69,8 @@ class CartManager {
 
 
     async addProductAtCart(cid, pid) {
+
+        await this.#fileSys.promises.mkdir(this.path, { recursive: true });
 
         let Product_Id = pid
 

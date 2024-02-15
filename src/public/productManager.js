@@ -24,7 +24,7 @@ class ProductManager {
 
 
     constructor(path) {
-        this.path = path
+        this.path = path + "/json"
         this.#fileSys = fs;
         this.#filePath = this.path + "/Productos.json"
         this.#prod = new Array()
