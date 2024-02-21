@@ -1,0 +1,79 @@
+.divider {
+    border-radius: 10px;
+    border-style: double;
+    display: flex;
+    flex-direction: row;
+    padding-left: 20px;
+    justify-content: center;
+}
+
+.generalForm {
+    border-radius: 10px;
+    border-style: double;
+    display: flex;
+    flex-direction: row;
+    padding-left: 20px;
+    width: auto;
+    margin-top: 25px;
+}
+
+.item {
+
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+
+}
+
+.form {
+    display: inline-block;
+    text-align: right;
+    flex-direction: column;
+    width: 50%;
+}
+
+.setP {
+    padding-right: 50px;
+    margin-left: 20px;
+
+}
+
+.formInput {
+    width: 90%;
+    margin-bottom: 10px;
+
+}
+
+.formDivider {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+
+
+}
+
+/* CSS */
+.btn {
+    background-color: brown;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 500;
+    height: 40px;
+    line-height: 20px;
+    padding: 1px 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+
+
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: #F082AC;
+}

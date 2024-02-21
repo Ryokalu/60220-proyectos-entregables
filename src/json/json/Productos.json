@@ -1,0 +1,35 @@
+[
+  {
+    "id": 470,
+    "title": "Mi Producto ",
+    "description": "Super descripcion",
+    "code": "code 3",
+    "price": 20000,
+    "status": true,
+    "stock": "44",
+    "category": "otros",
+    "thumbnail": "img/cinco"
+  },
+  {
+    "id": 897,
+    "title": "Mi otro producto",
+    "description": "descripcion del producto",
+    "code": "codigo3",
+    "price": "20000",
+    "status": true,
+    "stock": "44",
+    "category": "otros",
+    "thumbnail": "img/dos"
+  },
+  {
+    "id": 960,
+    "title": "Producto Genial",
+    "description": "un producto increible",
+    "code": "codigo5",
+    "price": "3500",
+    "status": true,
+    "stock": "77",
+    "category": "otros",
+    "thumbnail": "img/seis"
+  }
+]

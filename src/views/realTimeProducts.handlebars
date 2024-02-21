@@ -1,0 +1,73 @@
+<dir>
+    <h1>LISTADO DE PRODUCTOS</h1>
+    <div id="prodList" class="divider">
+        {{#each list}}
+        <div class="item">
+            <p>ID: {{this.id}}</p>
+            <p>Titulo: {{this.title}}</p>
+            <p>Descripcion: {{this.description}}</p>
+            <p>code: {{this.code}}</p>
+            <p>estado: {{this.price}}</p>
+            <p>price: {{this.status}}</p>
+            <p>stock: {{this.stock}}</p>
+            <p>category: {{this.category}}</p>
+            <p>thumbnail: {{this.thumbnail}}</p>
+        </div>
+        {{/each}}
+
+    </div>
+    <H2>FORMULARIO PARA AGREGAR</H2>
+    <div class="generalForm">
+        <div class="form">
+            <div class="formDivider">
+                <p class="setP"> Titulo</p>
+                <input id="title" class="formInput" type="text" alt="Introduce el Titulo" placeholder="Ej: mi producto">
+            </div>
+            <div class="formDivider">
+                <p class="setP"> Descripcion</p>
+                <input id="description" class="formInput" type="text" alt="Introduce la Descripcion"
+                    placeholder="Ej: este es un producto increible">
+            </div>
+            <div class="formDivider">
+                <p class="setP"> codigo</p>
+                <input id="code" class="formInput" type="text" alt="Introduce el codigo" placeholder="Ej: codigo223">
+            </div>
+            <div class="formDivider">
+                <p class="setP"> precio</p>
+                <input id="price" class="formInput" type="text" alt="Introduce el precio" placeholder="Ej: 23450">
+            </div>
+            <div class="formDivider">
+                <p class="setP"> stock</p>
+                <input id="stock" class="formInput" type="text" alt="Introduce el stock" placeholder="Ej: 440">
+            </div>
+            <div class="formDivider">
+                <p class="setP"> categoria</p>
+                <input id="category" class="formInput" type="text" alt="Introduce la categoria"
+                    placeholder="Ej: comida">
+            </div>
+            <div class="formDivider">
+                <p class="setP"> thumbnail</p>
+                <input id="thumbnail" class="formInput" type="text" alt="Introduce la ruta de img"
+                    placeholder="Ej: img/nueve">
+            </div>
+            <div class="formDivider">
+                <button id="addProd" class="btn">AGREGAR</button>
+            </div>
+        </div>
+    </div>
+    <H2>FORMULARIO PARA ELIMINAR</H2>
+    <div class="dividerForm">
+        <div class="form">
+            <div class="formDivider">
+                <p class="setP"> ID </p>
+                <input id="ID" class="formInput" type="text" alt="Introduce el ID" placeholder="ingresar un ID valido">
+                <div class="formDivider">
+                    <button id="delProd" class="btn">Eliminar &#129761;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</dir>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/realTimeProducts.js"></script>

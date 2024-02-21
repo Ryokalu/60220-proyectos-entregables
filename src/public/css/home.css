@@ -1,0 +1,25 @@
+h1 {
+    color: blue;
+}
+
+.divider {
+    border-radius: 10px;
+    border-style: double;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.item {
+
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+
+}
+
+.form {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
