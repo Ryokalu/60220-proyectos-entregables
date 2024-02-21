@@ -17,7 +17,7 @@ delListen.addEventListener('click', function () {
     let id = inputID.value.trim()
     let check = false
 
-    console.log(isNaN(parseInt(id)))
+
 
     if (isNaN(id)) {
         alert("favor de ingresar un numero valido")
@@ -30,7 +30,7 @@ delListen.addEventListener('click', function () {
     }
 
     if (!check) {
-        console.log("hola")
+
         socket.emit("del", parseInt(id))
         inputID.value = ""
     }

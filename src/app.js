@@ -32,7 +32,7 @@ app.use('/', viewProducts)
 
 socketSer.on('connection', socket => {
     console.log("Usuario Conectado")
-    socketSer.emit('d', "mensaje enviado")
+    socketSer.emit('d', "Conectado")
 
     socket.on('add', async data => {
 
