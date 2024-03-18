@@ -1,0 +1,33 @@
+{{#if valid}}
+<div>
+    {{#each payload}}
+    <div>
+        <p>Title : {{this.title}} </p>
+        <p>description : {{this.description}} </p>
+        <p>Code : {{this.code}} </p>
+        <p>Status : {{this.status}} </p>
+        <p>Price : {{this.price}} </p>
+        <p>Stock : {{this.stock}} </p>
+        <p>Category : {{this.category}} </p>
+    </div>
+    <button class="common" name={{this.id}}>agregar al carrito</button>
+    <p>---------------------</p>
+    {{/each}}
+</div>
+<br />
+<div>
+    {{#if hasPrevPage}}
+    <a href={{this.prevLink}}> Ir a Pagina anterior</a>
+    {{/if}}
+    {{this.page}}
+    {{#if hasNextPage}}
+    <a href={{this.nextLink}}> Ir a Pagina Siguiente</a>
+    {{/if}}
+</div>
+{{else}}
+<h1>NO HAY PRODUCTOS CON LA BUSQUEDA APLICADA</h1>
+{{/if}}
+
+
+<script src="/js/cart.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>

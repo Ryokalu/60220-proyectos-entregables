@@ -1,0 +1,25 @@
+{{#if success}}
+<div>
+    <p>CART ID : {{docs.0._id}} </p>
+    {{#each docs}}
+    <div>
+        {{#each this.products}}
+        <div>
+            <p>Title : {{this.products.title}} </p>
+            <p>description : {{this.products.description}} </p>
+            <p>Code : {{this.products.code}} </p>
+            <p>Status : {{this.products.status}} </p>
+            <p>Price : {{this.products.price}} </p>
+            <p>Stock : {{this.products.stock}} </p>
+            <p>Category : {{this.products.category}} </p>
+            <p>quantity : {{this.quantity}} </p>
+
+        </div>
+        <p>---------------------</p>
+        {{/each}}
+    </div>
+    {{/each}}
+</div>
+{{else}}
+<h1>HELLO</h1>
+{{/if}}
