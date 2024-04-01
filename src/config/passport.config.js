@@ -103,12 +103,8 @@ const initPassport = () => {
                 console.log(e)
                 return done(e)
             }
-
         }
-
     ))
-
-
 }
 
 export default initPassport
