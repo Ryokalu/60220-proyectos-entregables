@@ -1,0 +1,56 @@
+components:
+  schema:
+    Product:
+      type: object
+      required:
+        - id
+        - title
+        - description
+        - code
+        - status
+        - price
+        - stock
+        - category
+        - thumbnail
+        - owner
+      properties:
+        _id:
+          type: ObjectId
+          description: mongodb assigns the id
+        title:
+          type: string
+          description: the title of the product
+        description:
+          type: string
+          description: the description of the product
+        code:
+          type: string
+          description: the code of the product, the app assigns the code
+        status:
+          type: boolean
+          description: the status of the product, always is true
+        price:
+          type: number
+          description: the price of the product
+        stock:
+          type: number
+          description: the stock of the product
+        category:
+          type: string
+          description: the category of the product
+        thumbnail:
+          type: string
+          description: the thumbnail of the product
+        owner:
+          type: string
+          description: the owner of the product, the user who can create a product is admin and premium
+      example:
+        _id: ObjectId(6640438b2a9e8b573ea868f2)
+        title: "Fantastic Metal Fish"
+        description: "Boston's most advanced compression wear technology increases muscle ox…"
+        code: "248aa7ab-093b-404e-94fd-36a42b682095"
+        status: true
+        price: 333
+        stock: 298
+        category: "Toys"
+        thumbnail: "Imagen/224"

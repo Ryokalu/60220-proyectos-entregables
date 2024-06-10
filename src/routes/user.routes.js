@@ -1,0 +1,56 @@
+import { Router } from "express";
+// import userProvider from "../services/user.services.js";//
+import passport from "passport";
+// import { tokenGenerator, validpass } from '../utils.js'//
+import { authToken } from "../utils.js";
+
+import { authorization } from "../utils.js";
+
+// import { check } from "../utils.js";
+
+//////
+
+import {
+    WEB_LOGIN,
+    WEB_REGISTER,
+    user_register_post,
+    user_login_post,
+    user_logout_get,
+    user_register_fail,
+    user_login_fail,
+    githubCallback_authenticate,
+    github_authenticate,
+    current_user_id,
+    render_User,
+    render_administrator,
+    valid_admin,
+    get_User,
+    valid_user,
+    user_pass_recover,
+    user_change_role
+} from '../controllers/user.controller.js'
+
+const router = Router()
+
+router.get('/api/user/:id', get_User)
+router.get('/login', WEB_LOGIN)
+router.get('/register', WEB_REGISTER)
+router.post("/user/register", passport.authenticate('register', { failureRedirect: '/user/fallo-registro' }), user_register_post)
+router.post("/user/login", user_login_post)
+router.get('/user/logout', user_logout_get)
+router.get("/user/fallo-registro", user_register_fail)
+router.get("/user/fallo-login", user_login_fail)
+router.get('/user/githubCallback', passport.authenticate('github', { failureRedirect: '/github/error' }), githubCallback_authenticate)
+router.get('/user/github', passport.authenticate('github', { scope: ['user:email'] }), github_authenticate)
+router.get('/user/current/:userId', authToken, authorization(["user"]), current_user_id)
+// router.get('/user/current/', authorization(), render_User)
+router.get('/user/current/', render_User)
+router.get('/user/administrator', render_administrator)
+router.get('/admin/validator', authToken, authorization(["admin", "premium"]), valid_admin)
+router.get('/api/user/validator/:id', valid_user)
+router.get('/user/recover', user_pass_recover)
+router.get('/api/user/premium/:_id', user_change_role)
+
+export default router
+
+

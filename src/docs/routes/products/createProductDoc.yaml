@@ -1,0 +1,23 @@
+paths:
+  /api/products/:
+    post:
+      summary: Create Product (only works for admin and premium users)
+      tags:
+        - Products
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/requestBodies/createProduct" #agregar la ruta de referencia
+      responses:
+        "200":
+          description: The product is created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schema/Product" #agregar la ruta de referencia
+        "401":
+          description: Empty fields or the code used is repeated
+        "500":
+          description: the app cannot create the product due to a bad query
