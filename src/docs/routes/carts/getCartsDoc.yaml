@@ -1,0 +1,41 @@
+paths:
+  /api/carts/:
+    get:
+      summary: get every cart avaliable
+      tags:
+        - Carts
+      responses:
+        "200":
+          description: the cart list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schema/Cart"
+        "500":
+          description: app error
+  /api/carts/{cid}:
+    get:
+      summary: search carts using the given id
+      tags:
+        - Carts
+      parameters:
+        - name: cid
+          in: path
+          description: the cart cid
+          required: true
+          type: string
+      responses:
+        "200":
+          description: the cart list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schema/Cart"
+        "401":
+          description: the given id is not valid
+        "500":
+          description: the app cannot process the request due to a bad query
