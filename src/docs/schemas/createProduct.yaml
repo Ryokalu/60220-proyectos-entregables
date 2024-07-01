@@ -1,0 +1,37 @@
+components:
+  requestBodies:
+    createProduct:
+      type: object
+      required: 
+        - title
+        - description
+        - price
+        - stock
+        - category
+        - thumbnail
+      properties:
+        title:
+          type: string
+          description: name of the product
+        description:
+          type: string
+          description: description of the product
+        price:
+          type: number
+          description: price of the product
+        stock:
+          type: number
+          description: stock of the product
+        category:
+          type: string
+          description: category of the product
+        thumbnail:
+          type: string
+          description: thumbnail of the product
+      example:
+        title: Producto genial
+        description: una increible descripcion
+        price: 22000
+        stock: 23
+        category: genial
+        thumbnail: img/genial

@@ -1,0 +1,39 @@
+paths:
+  /api/products/:
+    get:
+      summary: Get every product avaliable
+      tags:
+        - Products
+      responses:
+        "200":
+          description: A list of products is received
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schema/Product"
+        "500":
+          description: the application can find the product list
+  /api/products/{pid}:
+    get:
+      summary: search product using the given id
+      tags:
+        - Products
+      parameters:
+        - name: pid
+          in: path
+          description: need to use the product id (you need to use the id inside in ObjectId))
+          required: true
+          type: string
+      responses:
+        "200":
+          description: the product with given id
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schema/Product"
+        "401":
+          description: "cannot find the given pid"
+        "500":
+          description: "The server cannot respond to the request. "

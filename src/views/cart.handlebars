@@ -1,0 +1,28 @@
+{{#if success}}
+<div>
+    <div id="header"> <a href="/user/current"> Ir a Usuario</a> <a href="/products"> Ir a Productos</a></div>
+    <p>CART ID : {{docs.0._id}} </p>
+    {{#each docs}}
+    <div>
+        {{#each this.products}}
+        <div>
+            <p>Title : {{this.products.title}} </p>
+            <p>description : {{this.products.description}} </p>
+            <p>Code : {{this.products.code}} </p>
+            <p>Status : {{this.products.status}} </p>
+            <p>Price : {{this.products.price}} </p>
+            <p>Stock : {{this.products.stock}} </p>
+            <p>Category : {{this.products.category}} </p>
+            <p>quantity : {{this.quantity}} </p>
+
+        </div>
+        <p>---------------------</p>
+        {{/each}}
+    </div>
+    {{/each}}
+    <button id="btnComprar">Comprar</button>
+</div>
+{{else}}
+<h1>NO hay carrito</h1>
+{{/if}}
+<script src="/js/buyProducts.js"></script>

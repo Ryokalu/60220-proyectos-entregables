@@ -1,0 +1,27 @@
+paths:
+  /api/products/{pid}:
+    delete:
+      summary: delete the product using the given pid (only works for admin and premium users)
+      tags:
+        - Products
+      parameters:
+        - name: pid
+          in: path
+          description: need to use the product id (you need to use the id inside in ObjectId))
+          required: true
+          type: string
+      responses:
+        "200":
+          description: "the product was deleted"
+          content:
+            application/json:
+              schema:
+                type: string
+                description: "the result given by the app"
+                example: producto eliminado correctamente
+        "400":
+          description: "empty fields"
+        "401":
+          description: "cannot find the given pid or you need to be authorized"
+        "500":
+          description: "The server cannot respond to the request. "
