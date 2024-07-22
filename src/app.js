@@ -82,7 +82,7 @@ app.use("/", loggerTest)
 app.use("/recover", recoverPass)
 
 // api docs
-app.use('/api/docs', swaggerUI.serve, swaggerUI.setup(swaggerSpecs))
+// app.use('/api/docs', swaggerUI.serve, swaggerUI.setup(swaggerSpecs))
 
 app.use((req, res, next) => { // en el caso de que un endpoint no exista, devuelve este mensaje
     res.render("404")
