@@ -1,0 +1,45 @@
+paths:
+  /api/carts/{cid}/products/{pid}:
+    post:
+      summary: add a product to the user's carts (only works for premium and register user)
+      tags:
+        - Carts
+      parameters:
+        - name: cid
+          in: path
+          description: the cart id assign to the user
+          required: true
+          type: string
+        - name: pid
+          in: path
+          description: the product's pid
+          required: true
+          type: string
+      responses:
+        "200":
+          description: the product is added to the cart
+          content:
+            application/json:
+              schema:
+                type: string
+                example: producto agregado al carro
+        "401":
+          description: cannot find the pid o cid or you are not authorized"
+        "500":
+          description: the app cannot process the request due to a bad query
+  /api/carts/{cid}/purchases:
+    post:
+      summary: process the products in the user's carts (send a email to the user)
+      tags:
+        - Carts
+      parameters:
+        - name: cid
+          in: path
+          description: the cart id assign to the user
+          required: true
+          type: string
+      responses:
+        "200":
+          description: the ok given by the app (send the email to the user, this work when the user is logged)
+        "500":
+          description: the app cannot process the request due to a bad query

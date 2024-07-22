@@ -1,0 +1,123 @@
+<header class="bg-primary text-white text-center py-2">
+    <h1>Editar productos</h1>
+    <nav>
+        <a href="/user/administrator/user" class="text-white mx-2"> Modificar rol de usuario</a>
+        <button id="close" class="btn btn-link text-white mx-2">Cerrar sesion</button>
+    </nav>
+</header>
+
+<div class="d-flex justify-content-center align-items-center">
+    <div class="p-3 bg-light border">
+        <div class="row justify-content-center align-items-center">
+            <div class="col ">
+                <h2>Agrega tus productos</h2>
+                <div>
+                    <p> Title</p>
+                    <input type="text" id="txtTitleCreate" class="form-control">
+                    <p> Description</p>
+                    <input type="text" id="txtDescriptionCreate" class="form-control">
+                    <p> price</p>
+                    <input type="text" id="txtPriceCreate" class="form-control">
+                    <p> stock</p>
+                    <input type="text" id="txtStockCreate" class="form-control">
+                    <p> category</p>
+                    <input type="text" id="txtCategoryCreate" class="form-control">
+                    <p> thumbnail</p>
+                    <input type="text" id="txtThumbnailCreate" class="form-control">
+                    <p></p>
+                    <button id="btnAgregar" class="btn btn-primary"> Agregar </button>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center">
+            <div class="col ">
+                <p></p>
+                <h2>Actualiza tus productos</h2>
+                <div>
+                    <p>BUSCAR POR ID</p>
+                    <input type="text" id="txtIDUpdate" class="form-control">
+                    <p></p>
+                    <button id="btnSearch" class="btn btn-primary"> Buscar</button>
+                    <p></p>
+                    <p> Title</p>
+                    <input type="text" id="txtTitleUpdate" class="form-control">
+                    <p> Description</p>
+                    <input type="text" id="txtDescriptionUpdate" class="form-control">
+                    <p> price</p>
+                    <input type="text" id="txtpriceUpdate" class="form-control">
+                    <p> stock</p>
+                    <input type="text" id="txtstockUpdate" class="form-control">
+                    <p> category</p>
+                    <input type="text" id="txtcategoryUpdate" class="form-control">
+                    <p> thumbnail</p>
+                    <input type="text" id="txtthumbnailUpdate" class="form-control">
+                    <p></p>
+                    <button id="btnUpdate" class="btn btn-primary"> Update </button>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center">
+            <div class="col ">
+                <p></p>
+                <h2>Eliminar tus productos</h2>
+                <div>
+                    <p> ID</p>
+                    <input type="text" id="txtIDDelete" class="form-control">
+                    <p></p>
+                    <button id="btnDelete" class="btn btn-primary"> Delete </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div>
+        {{!-- <h2>Agrega tus productos</h2>
+        <div>
+            <p> Title</p>
+            <input type="text" id="txtTitleCreate">
+            <p> Description</p>
+            <input type="text" id="txtDescriptionCreate">
+            <p> price</p>
+            <input type="text" id="txtPriceCreate">
+            <p> stock</p>
+            <input type="text" id="txtStockCreate">
+            <p> category</p>
+            <input type="text" id="txtCategoryCreate">
+            <p> thumbnail</p>
+            <input type="text" id="txtThumbnailCreate">
+            <button id="btnAgregar"> ADD </button>
+        </div> --}}
+        <div>
+            {{!-- <p> ID</p>
+            <h2>Actualiza tus productos</h2>
+            <div>
+                <p>BUSCAR POR ID</p>
+                <input type="text" id="txtIDUpdate">
+                <button id="btnSearch"> Buscar</button>
+                <p> Title</p>
+                <input type="text" id="txtTitleUpdate">
+                <p> Description</p>
+                <input type="text" id="txtDescriptionUpdate">
+                <p> price</p>
+                <input type="text" id="txtpriceUpdate">
+                <p> stock</p>
+                <input type="text" id="txtstockUpdate">
+                <p> category</p>
+                <input type="text" id="txtcategoryUpdate">
+                <p> thumbnail</p>
+                <input type="text" id="txtthumbnailUpdate">
+                <button id="btnUpdate"> Update </button>
+            </div> --}}
+            {{!-- <h2>Eliminar tus productos</h2>
+            <div>
+                <p> ID</p>
+                <input type="text" id="txtIDDelete">
+
+                <button id="btnDelete"> Delete </button>
+            </div> --}}
+        </div>
+    </div>
+
+    <script src="/js/adminProducts.js"></script>
+    <script src="/js/validAdmin.js"></script>

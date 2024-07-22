@@ -1,0 +1,15 @@
+-Limpiar usuarios que no hayan conetado en 2 días (Enviar correo
+ indicando que su cuenta ha sido eliminada por inactividad)
+-Crear vista para visualizar, modificar rol u eliminar usuarios
+ (Solo admin)
+-Endpoint eliminar productos, si el producto pertence a usuario
+ Premium le envie correo indicando producto eliminado
+
+-Aplicar css y/o alguna libreria
+
+-Revisar Endpoints
+
+-Limpiar Código
+
+-Desplegar en plataforma Railway.app y corroborar proceso de completo
+ completo

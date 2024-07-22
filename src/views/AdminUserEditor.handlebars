@@ -1,0 +1,45 @@
+<header class="bg-primary text-white text-center py-2">
+    <h1>Modifica el rol de un Usuario</h1>
+    <nav>
+        <a href="/user/administrator/" class="text-white mx-2"> Modificar Productos</a>
+        <button id="close" class="btn btn-link text-white mx-2">Cerrar sesion</button>
+    </nav>
+</header>
+
+<div class="d-flex justify-content-center align-items-center">
+    <div class="p-3 bg-light border">
+        <div class="row justify-content-center align-items-center">
+            <div class="col ">
+                <h2> Ingresa el ID del usuario a modificar </h2>
+                <label> ID</label>
+                <input type="text" id="txtUserID">
+                <button id="btnUserSearch" class="btn btn-primary"> Buscar </button>
+            </div>
+        </div>
+        <hr style="margin-top: 20px;" class="border border-primary border-3 ">
+        <div class="row">
+            <div class="col justify-content-center align-items-center">
+                <h2> Datos del usuario </h2>
+                <h3> Id del usuario</h3>
+                <label> ID: </label>
+                <label id="innerTxt"> ----- </label>
+                <p> ROL</p>
+                <select id="userRol" class="form-select" aria-label=".form-select-sm example">
+                    <option value="none"> Ninguno</option>
+                    <option value="USER"> User</option>
+                    <option value="PREMIUM"> Premium</option>
+                </select>
+                <button id="btnUserUpdate" class="btn btn-primary"> modificar </button>
+            </div>
+        </div>
+        <hr style="margin-top: 20px;" class="border border-primary border-3 ">
+        <div class="row">
+            <div class="col justify-content-center align-items-center">
+                <button id="btnUserDelete" class="btn btn-primary"> Borrar usuario </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="/js/AdminUserHandler.js">  </script>

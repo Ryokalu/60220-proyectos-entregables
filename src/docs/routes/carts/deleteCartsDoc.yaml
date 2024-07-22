@@ -1,0 +1,34 @@
+paths:
+  /api/products/{cid}/products/{pid}:
+    delete:
+      summary: update the quantity of the product in the cart
+      tags:
+        - Carts
+      parameters:
+        - name: cid
+          in: path
+          description: the cart id assign to the user
+          required: true
+          type: string
+        - name: pid
+          in: path
+          description: the product's cid
+          required: true
+          type: string
+      responses:
+        "200":
+          description: the dalete result given by the app
+          content:
+            application/json:
+              schema:
+                type: array
+                example:
+                  {
+                    "_id": "6665324e81eda06f8cab85c4",
+                    "products": [],
+                    "__v": 1,
+                  }
+        "401":
+          description: cannot find the pid o cid or you are not authorized"
+        "500":
+          description: the app cannot process the request due to a bad query

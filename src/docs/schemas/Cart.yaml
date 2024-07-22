@@ -1,0 +1,60 @@
+components:
+  schema:
+    Cart:
+      type: object
+      required:
+        - result
+        - payload
+      properties:
+        result:
+          type: string
+          description: the ok status
+        payload:
+          type: array
+          description: bring carts
+      example:
+        result: success
+        payload:
+          [
+            {
+              "_id": ObjectId(6635c769fdcef40e1dfee802),
+              "products":
+                [
+                  {
+                    "products":
+                      {
+                        "owner": "admin",
+                        "_id": "6640438b2a9e8b573ea8690f",
+                        "title": "Ergonomic Rubber Bacon",
+                        "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
+                        "code": "9592fc3a-d8f3-462d-9118-e37d354d90d8",
+                        "status": true,
+                        "price": 624,
+                        "stock": 142,
+                        "category": "Kids",
+                        "thumbnail": "Imagen/199",
+                      },
+                    "quantity": 1,
+                    "_id": ObjectId(665d34e60308f2a9accefc75),
+                  },
+                  {
+                    "products":
+                      {
+                        "_id": "665d21a86c52c5c457a7a1cd",
+                        "title": "zaptron",
+                        "description": "zapatrones",
+                        "code": "96ff932e-17ad-4279-a645-00cae0cccb1a",
+                        "status": true,
+                        "price": 123,
+                        "stock": 123,
+                        "category": "zapatros",
+                        "thumbnail": "zaptros",
+                        "owner": "admin",
+                        "__v": 0,
+                      },
+                    "quantity": 1,
+                    "_id": "665d34ee0308f2a9accefc7e",
+                  },
+                ],
+            },
+          ]
