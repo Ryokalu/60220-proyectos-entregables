@@ -24,8 +24,8 @@ import configEnv from "./config/env/config.js"
 import { logger } from "./config/loggers/custom.logger.js";
 
 // docs
-import swaggerUI from "swagger-ui-express"
-import { swaggerSpecs } from "./swagger.specs.js";
+// import swaggerUI from "swagger-ui-express"
+// import { swaggerSpecs } from "./swagger.specs.js";
 
 
 let chat = new chatServices();
